@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Nunito, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -42,8 +43,25 @@ hr {
 }
 
 #nav {
-    position: relative;
+    box-shadow: inset 2px 4px 10px rgba(0, 0, 0, 0.25);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background: linear-gradient(to right, #585858 0%, #c7c7c7 10%);
+}
+
+#nav nav {
     text-transform: uppercase;
+    background: -webkit-linear-gradient(#92551d, #c58d39);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#nav nav ul li a {
+    cursor: pointer;
+}
+
+#nav nav ul li a:hover {
     background: -webkit-linear-gradient(#a15b19, #F1F1F1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
