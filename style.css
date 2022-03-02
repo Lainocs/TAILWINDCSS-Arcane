@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Nunito, sans-serif;
+}
+
+body {
+    /* linear gradient */
+    background: linear-gradient(to top, #e6e6e6 60%, #313131 100%);
+}
+
+hr {
+    border-top-width: 0 !important;
+    padding: 3px;
+    background: -webkit-linear-gradient(#c98f55, rgb(112, 59, 15));
+}
+
+#header, #history {
+    position: relative;
+}
+
+/* ##################### */
+/* Header */
+
+.bg-header::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/header.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.arcane-logo {
+    height: 90vh;
+}
+
+#nav {
+    position: relative;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(#a15b19, #F1F1F1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-logo {
+    position: absolute;
+    left: 50px;
+}
+
+/* ##################### */
+/* History */
+
+.bg-history::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/bg-history.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-history {
+    color: #8B8B8B;
+}
+
+.bg-history button {
+    /* linear gradient */
+    background: linear-gradient(to top, #0E1A12 0%, #263621 100%);
+}
+
+.jinx-history {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .bg-header::before {
+        opacity: 0.3;
+    }
+
+    .arcane-logo {
+        justify-content: center;
+    }
+    .arcane-logo img {
+        width: 90%;
+        padding: 0;
+    }
+
+    .bg-history {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .bg-history:first-child {
+        color: #dbdbdb;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .bg-history:first-child button {
+        color: #d1d1d1;
+        width: 100%;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    .jinx-history {
+        position: inherit;
+        display: none;
+    }
+
+    .jinx-history img {
+        display: none;
+    }
+}
